@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+</head>
+<script>
+    class Carrousel extends HTMLElement{
+        connectedCallback(){
+         alert('Soy un carrousel');
+         this.innerHTML = '<h2>Fotos</h2>';
+         this.innerHTML = '<div class ="contenedor-imagen"></div>';
+         this.innerHTML = '<button class="atras">&lt</button>';
+         this.innerHTML = '<button class="atras">&lt</button>';
+
+         this.style.width = '500px';
+         } 
+    }
+    if(!customElements.get('mdw-carrousel-fotos')){
+       customElements.define('mdw-carrousel-fotos',Carrousel)
+    }
+
+</script>
+<body>
+ <mdw-carrousel-fotos></mdw-carrousel-fotos>
+</body>
+</html>
